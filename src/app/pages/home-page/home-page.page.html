@@ -1,7 +1,8 @@
 <ion-header>
   <ion-toolbar style="--background: white">
-    <ion-icon name='arrow-back'></ion-icon>
-    <ion-img></ion-img>
+    <ion-buttons slot="start">
+      <ion-img class="header-icon" src="/assets/icon/icon-white.png"></ion-img>
+    </ion-buttons>
     <ion-buttons slot="end">
       <ion-button style="color: black;">About Us</ion-button>
       <ion-button (click)='onLoginClick()'>
@@ -12,19 +13,37 @@
         <ion-icon style="color: #FEBC4D;" name="create-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <!-- <ion-title>homePage</ion-title> -->
-  </ion-toolbar>
+  </ion-toolbar >
+
+  <!-- <ion-toolbar style="--background: white">
+    
+    <ion-icon name='arrow-back'></ion-icon>
+    
+    <ion-buttons slot="end">
+      <ion-button style="color: black;">About Us</ion-button>
+      <ion-button (click)='onLoginClick()'>
+        <ion-icon style="color: #FEBC4D;" name="log-in-outline"></ion-icon>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+      <ion-button (click)='onCreateUser()'>
+        <ion-icon style="color: #FEBC4D;" name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <! -- <ion-title>homePage</ion-title> -- >
+  </ion-toolbar> -->
 </ion-header>
 
 <ion-content>
 
   <div style="background:#FEBC4D">
     <ion-row>
-      <ion-col size=6.5 offset=2.5>
-        <pre>
-Find Location
-For your Occassion
-         </pre>
+      <ion-col size=6.5 offset="1">
+        <!-- <pre> -->
+          <h1 calss="font-Balgor">
+            Find Location
+            For your Occassion
+          </h1>
+         <!-- </pre> -->
       </ion-col>
     </ion-row>
 
