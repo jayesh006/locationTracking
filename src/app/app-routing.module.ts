@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'create-business-user',
     loadChildren: () => import('./pages/create-business-user/create-business-user.module').then( m => m.CreateBusinessUserPageModule)
   },
+  {
+    path: 'sign-up-business',
+    loadChildren: () => import('./pages/sign-up-business/sign-up-business.module').then( m => m.SignUpBusinessPageModule)
+  },
   
 ];
 

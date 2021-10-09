@@ -17,8 +17,12 @@ export class LoginMobileViewPage implements OnInit {
   ngOnInit() {
   }
 
-  onSignUpClick() {
+  onSignUpCustomerClick() {
     this.com.navCtrl.navigateForward('sign-up');
+  }
+
+  onSignUpBusinessClick() {
+    this.com.navCtrl.navigateForward('sign-up-business');
   }
 
   onLoginClick(){
