@@ -1,5 +1,37 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
+@font-face {
+  font-family: AppFont;
+  src: url("../assets/fonts/Lato/Lato-Regular.ttf");
+  src: url("../assets/fonts/Lato/Lato-Bold.ttf");
+}
+
+:root {
+  --ion-font-family: "AppFont";
+  -webkit-font-smoothing: "antialiased";
+  -moz-osx-font-smoothing: grayscale;
+
+  h1{
+    font-size: 22px;
+    color:var(--ion-color-tertiary)
+  }
+  h2{
+    font-size: 18px;
+    color:var(--ion-color-tertiary)
+  }
+  h3{
+    font-size: 14px;
+    color:var(--ion-color-tertiary)
+  }
+  ion-label{
+    font-size: 14px;
+    color:var(--ion-color-tertiary)
+  }
+  p{
+    font-size: 14px;
+    color:var(--ion-color-tertiary)
+  }
+}
 
 /** Ionic CSS Variables **/
 :root {
