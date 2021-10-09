@@ -12,7 +12,8 @@
 <ion-content>
 
 
-  <table width='100%' height='100%'>
+  <!-- height='100%' -->
+  <table width='100%' >
     <tr>
       <td align="center" valign='middle'>
 
@@ -33,14 +34,23 @@
           <ion-input placeholder='Enter Password'></ion-input>
         </ion-item>
 
-        <ion-button style="--background: #FAC800; color: black;" shape='rounde' (click)='onSignUpClick()' >Sign Up</ion-button>
-        &nbsp;&nbsp;&nbsp;
-        <ion-button style="--background: #FAC800; color: black;" shape='rounde' (click)='onLoginClick()'>Login</ion-button>
-        
-
+       <div>
+        <ion-button  expand='full' class="btnCss" shape='rounde' (click)='onLoginClick()'>Login</ion-button>
         <div>
-          <ion-label >forgot password?</ion-label>
+          <a>forgot password?</a>
         </div>
+       </div>
+
+       <div>
+        <ion-text class="dont-have-account">Don't have an account? Sign Up as</ion-text>
+        <div>
+          <ion-button  class="btnCss" shape='rounde' (click)='onSignUpCustomerClick()' > Customer</ion-button>
+          <ion-button  class="btnCss" shape='rounde' (click)='onSignUpBusinessClick()' > Business</ion-button>
+        </div>
+        <div>
+          <!-- <ion-button expand='full' class="btnCss" shape='rounde' (click)='onSignUpBusinessClick()' >Sign Up as Business</ion-button> -->
+        </div>
+       </div>
 
       </td>
     </tr>

@@ -21,4 +21,8 @@ export class HomePagePage implements OnInit {
     this.com.navCtrl.navigateForward('list-with-us');
   }
 
+  getLoction(event){
+    console.log(event.target.value);
+  }
+
 }

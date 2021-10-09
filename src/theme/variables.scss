@@ -38,10 +38,17 @@
   ion-label{
     font-size: 14px;
     // color:var(--ion-color-tertiary)
+    // margin-left: 10px !important;
+    // line-height: 2 !important;
   }
   p{
     font-size: 14px;
     // color:var(--ion-color-tertiary)
+  }
+
+  ion-input{
+    --placeholder-font-weight:100;
+    --placeholder-opacity:0.5;
   }
 }
 
