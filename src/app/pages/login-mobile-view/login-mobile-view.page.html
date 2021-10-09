@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)='goBack()' >
+        <ion-icon name='arrow-back'></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <table width='100%' height='100%'>
+    <tr>
+      <td align="center" valign='middle'>
+
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>Select User Type:</ion-label>
+          <ion-select placeholder='User Type' interface="action-sheet">
+            <ion-select-option *ngFor='let type of userType'>{{type.label}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>User Name</ion-label>
+          <ion-input placeholder='Enter User Name'></ion-input>
+        </ion-item>
+
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>Password</ion-label>
+          <ion-input placeholder='Enter Password'></ion-input>
+        </ion-item>
+
+        <ion-button style="--background: #FAC800; color: black;" shape='rounde' (click)='onSignUpClick()' >Sign Up</ion-button>
+        &nbsp;&nbsp;&nbsp;
+        <ion-button style="--background: #FAC800; color: black;" shape='rounde' (click)='onLoginClick()'>Login</ion-button>
+        
+
+        <div>
+          <ion-label >forgot password?</ion-label>
+        </div>
+
+      </td>
+    </tr>
+
+
+  </table>
+
+</ion-content>

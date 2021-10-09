@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)='this.goBack()'>
+        <ion-icon name='arrow-back'></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <table width='100%' height='100%'>
+    <tr>
+      <td align="center" valign='middle'>
+
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>Select User Type:</ion-label>
+          <ion-select placeholder='User Type' interface="action-sheet">
+            <ion-select-option *ngFor='let type of userType'>{{type.label}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>First Name</ion-label>
+          <ion-input placeholder='Enter First Name'></ion-input>
+        </ion-item>
+
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>Last Name</ion-label>
+          <ion-input placeholder='Enter Last Name'></ion-input>
+        </ion-item>
+
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>Email</ion-label>
+          <ion-input type='email' placeholder='Email address'></ion-input>
+        </ion-item>
+
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>Password</ion-label>
+          <ion-input placeholder='Create Password'></ion-input>
+        </ion-item>
+
+        <ion-button style="--background: #FAC800; color: black;" shape='rounde' (click)='onSignUpClick()' >Sign Up</ion-button>
+
+      </td>
+    </tr>
+
+
+  </table>
+
+
+  
+
+</ion-content>

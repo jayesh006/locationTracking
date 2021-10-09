@@ -1,5 +1,7 @@
 {
   "name": "Bmo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
