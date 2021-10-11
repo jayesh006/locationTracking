@@ -1,21 +1,41 @@
 .loginInputField {
-  border: 1px solid #FAC800;
+  border: 1px solid var(--ion-color-primary-tint);
   border-radius: 11px;
   margin: 15px;
   max-width: 400px;
+  // max-height: 60px;
   //   @media screen and (min-width: 600px) {
   //       width: 400px;
   //     //   text-align: center;
   //   }
+  ion-input{
+    --placeholder-color:#BABABA
+  }
+  ion-label{
+    color:#BABABA;
+    font-size: 16;
+  }
+}
+
+ion-item{
+  --border-width: 0;
+  --inner-border-width: 0;
 }
 
 
 .btnCss {
-  --background: #FAC800;
   color: black;
   margin: 15px;
   max-width: 400px;
+  min-height: 45px;
   line-height: 2;
+  --border-radius: 12px;
+  // font-weight: 600;
+  text-transform: capitalize;
+}
+
+.btnFull{
+  min-width: 90vw;
 }
 
 .dont-have-account{
