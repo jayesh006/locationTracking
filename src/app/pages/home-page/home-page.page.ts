@@ -6,7 +6,20 @@ import { ComService } from 'src/app/services/com.service';
   templateUrl: './home-page.page.html',
   styleUrls: ['./home-page.page.scss'],
 })
+
+
 export class HomePagePage implements OnInit {
+
+  public slideOpts = {
+    slidesPerView: 1.6,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    }
+  }
 
   constructor(private com:ComService) { }
 

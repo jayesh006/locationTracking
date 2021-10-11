@@ -18,3 +18,20 @@ ion-slides {
     padding-left: 5px;
     font-size: 20px;
   }
+
+  ion-slide{
+    // width: 250px !important;
+    height: 370px !important;
+
+    ion-card{
+      border-radius: 12px !important; 
+    }
+  }
+
+  .swiper-wrapper{
+    height: 350px;
+  }
+
+  .yellow-bg{
+    background:var(--ion-color-primary);
+  }
