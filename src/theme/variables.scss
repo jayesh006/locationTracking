@@ -6,30 +6,49 @@
   src: url("../assets/fonts/Lato/Lato-Bold.ttf");
 }
 
+@font-face {
+  font-family: Balgor;
+  src: url("../assets/fonts/Balgor.ttf");
+  src: url("../assets/fonts/Balgor.otf");
+}
+
 :root {
   --ion-font-family: "AppFont";
   -webkit-font-smoothing: "antialiased";
   -moz-osx-font-smoothing: grayscale;
 
+  .font-Balgor{
+    font-family: "Balgor" !important;
+    letter-spacing: 7px;
+    font-weight: 900;
+  }
+
   h1{
     font-size: 22px;
-    color:var(--ion-color-tertiary)
+    // color:var(--ion-color-tertiary)
   }
   h2{
     font-size: 18px;
-    color:var(--ion-color-tertiary)
+    // color:var(--ion-color-tertiary)
   }
   h3{
     font-size: 14px;
-    color:var(--ion-color-tertiary)
+    // color:var(--ion-color-tertiary)
   }
   ion-label{
     font-size: 14px;
-    color:var(--ion-color-tertiary)
+    // color:var(--ion-color-tertiary)
+    // margin-left: 10px !important;
+    // line-height: 2 !important;
   }
   p{
     font-size: 14px;
-    color:var(--ion-color-tertiary)
+    // color:var(--ion-color-tertiary)
+  }
+
+  ion-input{
+    --placeholder-font-weight:100;
+    --placeholder-opacity:0.5;
   }
 }
 

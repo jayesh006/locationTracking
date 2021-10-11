@@ -1,7 +1,8 @@
 <ion-header>
   <ion-toolbar style="--background: white">
-    <!-- <ion-icon name='arrow-back'></ion-icon> -->
-    <ion-img></ion-img>
+    <ion-buttons style="margin-left: 5%;" slot="start">
+      <ion-img class="header-icon" src="/assets/icon/icon-white.png"></ion-img>
+    </ion-buttons>
     <ion-buttons slot="end">
       <ion-button style="color: black;">About Us</ion-button>
       <ion-button (click)='onLoginClick()'>
@@ -12,25 +13,43 @@
         <ion-icon style="color: #FEBC4D;" name="create-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <!-- <ion-title>homePage</ion-title> -->
-  </ion-toolbar>
+  </ion-toolbar >
+
+  <!-- <ion-toolbar style="--background: white">
+    
+    <ion-icon name='arrow-back'></ion-icon>
+    
+    <ion-buttons slot="end">
+      <ion-button style="color: black;">About Us</ion-button>
+      <ion-button (click)='onLoginClick()'>
+        <ion-icon style="color: #FEBC4D;" name="log-in-outline"></ion-icon>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+      <ion-button (click)='onCreateUser()'>
+        <ion-icon style="color: #FEBC4D;" name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <! -- <ion-title>homePage</ion-title> -- >
+  </ion-toolbar> -->
 </ion-header>
 
 <ion-content>
 
   <div style="background:#FEBC4D">
     <ion-row>
-      <ion-col size=6.5 offset=2.5>
-        <pre>
-Find Location
-For your Occassion
-         </pre>
+      <ion-col size=6.5 offset="1">
+        <!-- <pre> -->
+          <h1 calss="font-Balgor">
+            Find Location
+            For your Occassion
+          </h1>
+         <!-- </pre> -->
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col size=10 offset=1 size-md=6 offset-md=3 style="padding: 10px;">
-        <ion-label position='stacked'>Location</ion-label>
+        <ion-label styel="margin-left: 10px;line-height: 2;" position='stacked'>Location</ion-label>
         
         <ion-input debounce='500' (ionChange)='getLoction($event)' style="border: 1px solid #FFFFFF;background: #FFFFFF; border-radius: 12px; color: black;"
           placeholder='New Jersey'>
@@ -41,7 +60,7 @@ For your Occassion
 
     <ion-row>
       <ion-col size=5 offset=1 size-md=3  offset-md=3 style="padding: 10px;">
-        <ion-label position='stacked'>Guest</ion-label>
+        <ion-label styel="margin-left: 10px;line-height: 2;" position='stacked'>Guest</ion-label>
         <ion-input style="border: 1px solid #FFFFFF;background: #FFFFFF; border-radius: 12px; color: black;"
           placeholder='80-100'>
           <i class="fas fa-users inputIcon" style="color: #C4C4C4;"></i>
@@ -49,7 +68,7 @@ For your Occassion
       </ion-col>
       <ion-col size=5 size-md=3 style="padding: 10px;">
 
-        <ion-label>Find a</ion-label>
+        <ion-label styel="margin-left: 10px;line-height: 2;">Find a</ion-label>
         <ion-select style="background: white;color: black; --padding-end:20px; border-radius: 12px;"
           placeholder='Venue'>
           <ion-select-option value="bird">Bird</ion-select-option>
@@ -60,9 +79,9 @@ For your Occassion
 
       </ion-col>
     </ion-row>
-    <div style="text-align: center;">
-      <ion-button style="--background: #F9683D; border-radius: 12px;">Search It!</ion-button>
-    </div>
+    <ion-row class="ion-justify-content-center">
+      <ion-button class="ion-margin-top ion-margin-bottom"  style="--background: #F9683D; border-radius: 12px;">Search It!</ion-button>
+    </ion-row>
   </div>
 
   <div style="background: white;">

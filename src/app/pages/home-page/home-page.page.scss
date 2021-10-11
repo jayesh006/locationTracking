@@ -3,6 +3,17 @@ ion-slides {
     width: 100%;
   }
 
+  .header-icon{
+    height: 50px;
+    width: 50px;
+    margin-left: 5%;
+  }
+
+  ion-label{
+    margin-left: 10px !important;
+    line-height: 2 !important;
+  }
+
   .inputIcon{
     padding-left: 5px;
     font-size: 20px;
