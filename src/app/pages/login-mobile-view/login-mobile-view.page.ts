@@ -36,4 +36,8 @@ export class LoginMobileViewPage implements OnInit {
     this.com.navCtrl.back();
   }
 
+  goToRestPasswordPage(){
+    this.com.navCtrl.navigateForward('reset-password');
+  }
+
 }

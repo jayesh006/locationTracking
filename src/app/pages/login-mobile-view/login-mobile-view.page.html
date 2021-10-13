@@ -40,9 +40,11 @@
        <div>
         <ion-button class="btnCss btnFull" (click)='onLoginClick()'><strong>Login</strong></ion-button>
         <div>
-          <a>forgot password?</a>
+          <a (click)='goToRestPasswordPage()' ><span style="color: #7A7A7A;  border-bottom: 1px solid #7A7A7A;">forgot password?</span></a>
         </div>
        </div>
+
+       <hr style="background: #BABABA;">
 
        <div>
         <ion-text class="dont-have-account">Don't have an account?</ion-text>

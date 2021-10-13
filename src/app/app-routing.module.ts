@@ -35,6 +35,18 @@ const routes: Routes = [
     path: 'sign-up-business',
     loadChildren: () => import('./pages/sign-up-business/sign-up-business.module').then( m => m.SignUpBusinessPageModule)
   },
+  {
+    path: 'verification',
+    loadChildren: () => import('./pages/verification/verification.module').then( m => m.VerificationPageModule)
+  },
+  {
+    path: 'reset-password',
+    loadChildren: () => import('./pages/reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
+  },
+  {
+    path: 'create-password',
+    loadChildren: () => import('./pages/create-password/create-password.module').then( m => m.CreatePasswordPageModule)
+  },
   
 ];
 

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)='goBack()'>
+        <ion-icon name='arrow-back'></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Verification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div>
+    <ion-text style="font-size: 24px; font-weight: bold;"> <span style="border-bottom: 3px solid #FAC800;">Verifica</span>tion</ion-text>
+  </div>
+
+  <div>
+    <ion-text style="font-style: 16px;">We have sent the verification code to your email address</ion-text>
+  </div>
+
+  <ion-row style="padding: 10px;">
+    <ion-col size=6  size-md=3 class="ion-align-self-center">
+      <ion-input placeholder='Enter Your code' style="border: 1px solid rgba(250, 200, 0, 0.25); box-sizing: border-box; box-shadow: 3px -2px 14px rgba(11, 11, 11, 0.07); border-radius: 12px;" ></ion-input>
+    </ion-col>
+    <ion-col size=4  size-md=3  class="ion-align-self-center" style="text-align: center;">
+      <ion-text>Resend</ion-text>
+    </ion-col>
+  </ion-row>
+
+  <div  style="color: #F9683D; padding-top: 0px;"> 
+    <ion-text>The code you entered is invalid</ion-text>
+  </div>
+
+  <div style="padding: 15px; max-width: 400px;">
+    <ion-button  style="--background: #FAC800; color: black; --border-radius: 12px; width: 100%;" (click)='verify()'  >Verify</ion-button>
+  </div>
+
+</ion-content>

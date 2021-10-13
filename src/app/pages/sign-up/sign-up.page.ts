@@ -9,20 +9,35 @@ import { ComService } from 'src/app/services/com.service';
 export class SignUpPage implements OnInit {
 
 
-userType = [{label:'User', id: 1, type:'user'},{label:'Business', id: 1, type:'business'}]
-  constructor(private com:ComService) { }
+  userType = [{ label: 'User', id: 1, type: 'user' }, { label: 'Business', id: 1, type: 'business' }]
+  eye = true;
+  passwordType = 'password';
+
+  constructor(private com: ComService) { }
 
   ngOnInit() {
   }
 
-  
 
-  goBack(){
+
+  goBack() {
     this.com.navCtrl.back();
   }
 
   onSignUpClick() {
     this.com.navCtrl.navigateForward('sign-up');
+  }
+
+  onEyeClick() {
+    if(this.eye == false){
+      this.eye = true;
+      this.passwordType = 'password';
+    }
+    else {
+      this.eye = false;
+      this.passwordType = 'text';
+    }
+    // this.eye = this.eye == false ? true : false;
   }
 
 }
