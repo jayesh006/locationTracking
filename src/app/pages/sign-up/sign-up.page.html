@@ -28,34 +28,43 @@
 
         <ion-item class="loginInputField">
           <ion-label position='floating'>First Name</ion-label>
-          <ion-input placeholder='Enter First Name'></ion-input>
+          <ion-input placeholder='Enter First Name' [(ngModel)]='firstName' ></ion-input>
         </ion-item>
 
         <ion-item class="loginInputField">
           <ion-label position='floating'>Last Name</ion-label>
-          <ion-input placeholder='Enter Last Name'></ion-input>
+          <ion-input placeholder='Enter Last Name' [(ngModel)]='lastName' ></ion-input>
         </ion-item>
 
         <ion-item class="loginInputField">
           <ion-label position='floating'>Email</ion-label>
-          <ion-input type='email' placeholder='Email address'></ion-input>
+          <ion-input type='email' placeholder='Email address' [(ngModel)]='email' ></ion-input>
         </ion-item>
 
         <ion-item class="loginInputField">
           <ion-label position='floating'>Phone</ion-label>
-          <ion-input type='tel' maxlength='10' placeholder='Phone Nmber'></ion-input>
+          <ion-input type='tel' maxlength='10' placeholder='Phone Nmber' [(ngModel)]='phoneNumber' ></ion-input>
         </ion-item>
 
         <ion-item class="loginInputField" style="display: flex; align-items: center;">
           <ion-label position='floating'>Password</ion-label>
-          <ion-input [type]='passwordType' placeholder='Create Password'>
+          <ion-input [type]='passwordType' placeholder='Create Password' [(ngModel)]='password' >
           </ion-input>
           <!-- <i class="fas fa-eye"></i> -->
           <ion-icon *ngIf='eye == true' slot='end' name="eye-outline" (click)='onEyeClick()' ></ion-icon>
           <ion-icon *ngIf='eye == false' slot='end' name="eye-off-outline" (click)='onEyeClick()' ></ion-icon>
         </ion-item>
 
-        <ion-button expand='full' style="--background: #FAC800; color: black; margin: 15px;" shape='rounde' (click)='onSignUpClick()' >Sign Up</ion-button>
+        <ion-item class="loginInputField" style="display: flex; align-items: center;">
+          <ion-label position='floating'>Confirm Password</ion-label>
+          <ion-input [type]='confirmPasswordType' placeholder='Confirm Password' [(ngModel)]='confirmPassword' >
+          </ion-input>
+          <!-- <i class="fas fa-eye"></i> -->
+          <ion-icon *ngIf='confirmPasswordeye == true' slot='end' name="eye-outline" (click)='onConfirmPasswordEye()' ></ion-icon>
+          <ion-icon *ngIf='confirmPasswordeye == false' slot='end' name="eye-off-outline" (click)='onConfirmPasswordEye()' ></ion-icon>
+        </ion-item>
+
+        <ion-button class="btnFull"  style="--background: #FAC800; color: black; margin: 15px;"  (click)='onSignUpClick()' >Sign Up</ion-button>
 
         <div style="color: #BABABA; padding: 22px; padding-top: 0px !important;">
           <ion-text >By continuing you are creating an account and accepting our <span style="color: black; border-bottom: 1px solid black;">Terms and Conditiions</span>  and <span style="color: black; border-bottom: 1px solid black;">Privacy Policy</span></ion-text>

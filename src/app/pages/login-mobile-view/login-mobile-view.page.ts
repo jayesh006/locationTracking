@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ComService } from 'src/app/services/com.service';
-import { HttpService } from 'src/app/services/http.service';
+import { HttpService, url } from 'src/app/services/http.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-login-mobile-view',
@@ -9,8 +10,11 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class LoginMobileViewPage implements OnInit {
 
-  userType = [{label:'Customer', id: 1, type:'user'},{label:'Business', id: 1, type:'business'}]
-  constructor(private com:ComService, private http:HttpService) { 
+  userType = [{label:'Customer', id: 4, type:'user'},{label:'Business', id: 3, type:'business'}]
+  userName = 'vedaakp@gmail.com';
+  password = 'pawan@123';
+  selectedRole = null;
+  constructor(private com:ComService, private http:HttpService, public storage: StorageService) { 
     
   }
 
@@ -26,10 +30,34 @@ export class LoginMobileViewPage implements OnInit {
   }
 
   onLoginClick(){
-    
-    this.http.gettest().then( (res:any) => {
+
+    console.log(this.userName, this.password, this.selectedRole)
+    let param = {
+      email: this.userName,
+      role: this.selectedRole,
+      password: this.password
+    }
+
+    this.http.postData(url.login,param).then( (res: any) => {
       console.log(res);
-    })
+      this.com.showToast(res.msg, 'bottom'); 
+      this.storage.setData('userData', res.data).then( () => {
+        this.com.navCtrl.navigateRoot('home-page');
+      });
+
+    }).catch(error => {
+      console.log(error);
+      if(error.error.status == 400){
+        this.com.showToast(error.error.data.errors[0].msg, 'top');
+      }
+      else if(error.error.status == 401){
+        this.com.showToast(error.error.message, 'top');
+      }
+    });
+    
+    // this.http.gettest().then( (res:any) => {
+    //   console.log(res);
+    // })
   }
 
   goBack(){

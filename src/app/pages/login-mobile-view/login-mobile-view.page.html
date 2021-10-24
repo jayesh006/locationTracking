@@ -22,19 +22,19 @@
 
         <ion-item class="loginInputField">
           <!-- <ion-label class="no-margin no-padding" position='floating'>Select User Type:</ion-label> -->
-          <ion-select placeholder="Select User Type " interface="action-sheet">
-            <ion-select-option *ngFor='let type of userType'>{{type.label}}</ion-select-option>
+          <ion-select placeholder="Select User Type " interface="action-sheet" [(ngModel)]='selectedRole' >
+            <ion-select-option *ngFor='let type of userType' [value]='type.id'  >{{type.label}}</ion-select-option>
           </ion-select>
         </ion-item>
 
         <ion-item class="loginInputField">
           <!-- <ion-label class="no-margin no-padding" position='floating'>User Name</ion-label> -->
-          <ion-input placeholder='User Name'></ion-input>
+          <ion-input placeholder='User Name' [(ngModel)]='userName' ></ion-input>
         </ion-item>
 
         <ion-item class="loginInputField">
           <!-- <ion-label class="no-margin no-padding" position='floating'>Password</ion-label> -->
-          <ion-input type="password" placeholder='Password'></ion-input>
+          <ion-input type="password" placeholder='Password' [(ngModel)]='password' ></ion-input>
         </ion-item>
 
        <div>

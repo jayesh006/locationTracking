@@ -24,21 +24,21 @@
   </ion-row>
 
 
-
-  <div style="border: 2px solid #FAC800; margin: 10px; " *ngIf='selectedButton == "owner"'>
+<!-- Vendor -->
+  <div style="border: 2px solid #FAC800; margin: 10px; " *ngIf='selectedButton == "vendor"'>
 
     <ion-row>
       <ion-col size=12 size-md=5 offset-md='0.5' >
         <ion-item class="loginInputField">
           <ion-label position='floating'>Business Name *</ion-label>
-        <ion-input placeholder='Example Hotel Grandios' ></ion-input>
+        <ion-input placeholder='Example Hotel Grandios' [(ngModel)]='vendorBusinessName' ></ion-input>
         </ion-item>
       </ion-col>
 
       <ion-col size=12 size-md=5 offset-md='1' >
         <ion-item class="loginInputField">
-          <ion-label position='stacked'>City</ion-label>
-        <ion-input placeholder='New York' ></ion-input>
+          <ion-label position='floating'>City</ion-label>
+        <ion-input placeholder='New York' [(ngModel)]='vendorCity'></ion-input>
         </ion-item>
       </ion-col>
 
@@ -47,15 +47,15 @@
     <ion-row>
       <ion-col size=12 size-md=5 offset-md='0.5' >
         <ion-item class="loginInputField">
-          <ion-label position='stacked'>Your Name *</ion-label>
-        <ion-input placeholder='Luke Skywalker' ></ion-input>
+          <ion-label position='floating'>Business Address *</ion-label>
+        <ion-input placeholder='XXXX' [(ngModel)]='vendorBusinessAddress' ></ion-input>
         </ion-item>
       </ion-col>
 
       <ion-col size=12 size-md=5 offset-md='1' >
         <ion-item class="loginInputField">
-          <ion-label position='stacked'>Contact Number * </ion-label>
-        <ion-input placeholder='Enter your mobile number' ></ion-input>
+          <ion-label position='floating'>Business Pincode *</ion-label>
+        <ion-input placeholder='XXXXXX' type='tel' maxlength='6' [(ngModel)]='vendorBusinessPincode'></ion-input>
         </ion-item>
       </ion-col>
 
@@ -64,17 +64,34 @@
     <ion-row>
       <ion-col size=12 size-md=5 offset-md='0.5' >
         <ion-item class="loginInputField">
-          <ion-label position='stacked'>Email *</ion-label>
-        <ion-input placeholder='luke@email.com' ></ion-input>
+          <ion-label position='floating'>Your Name *</ion-label>
+        <ion-input placeholder='Luke Skywalker' [(ngModel)]='vendorName' ></ion-input>
         </ion-item>
       </ion-col>
 
       <ion-col size=12 size-md=5 offset-md='1' >
         <ion-item class="loginInputField">
-          <ion-label position='stacked'>Type of Business * </ion-label>
-        <ion-input placeholder='Select Business type' ></ion-input>
+          <ion-label position='floating'>Contact Number * </ion-label>
+        <ion-input type='tel' maxlength='10' placeholder='Enter your mobile number' [(ngModel)]='vendorContactNumber' ></ion-input>
         </ion-item>
       </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col size=12 size-md=5 offset-md='0.5' >
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>Email *</ion-label>
+        <ion-input placeholder='luke@email.com' [(ngModel)]='vendorEmail' ></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <!-- <ion-col size=12 size-md=5 offset-md='1' >
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>Type of Business * </ion-label>
+        <ion-input placeholder='Select Business type' [(ngModel)]='vendorTypeOfBusiness' ></ion-input>
+        </ion-item>
+      </ion-col> -->
 
     </ion-row>
 
@@ -83,7 +100,7 @@
       <ion-col size=12 size-md=5 offset-md='0.5' >
         <ion-item class="loginInputField" style="padding-bottom: 0px; margin-bottom: 0px;"> 
           <ion-label position='floating'>Business Link (optional)</ion-label>
-        <ion-input placeholder='Link'  ></ion-input>
+        <ion-input placeholder='Link' [(ngModel)]='vendorBusinessLink' ></ion-input>
       </ion-item>
       <div style="font-size: 12px;  padding-top: 0px; margin-top: 0px; padding-left: 20px; padding-right: 15px;">
         <ion-text class="ion-text-wrap" >inorder for us to verify and get you onboard quickly as possible</ion-text>
@@ -95,7 +112,7 @@
         <ion-item class="loginInputField">
           <ion-label position='floating'>Business Description(optional) </ion-label>
         
-        <ion-textarea rows='4' placeholder='Hi .......................'  style="padding: 0px !important; margin-left: 0px !important;"></ion-textarea>
+        <ion-textarea rows='4' placeholder='Hi .......................'  style="padding: 0px !important; margin-left: 0px !important;" [(ngModel)]='vendorBusinessDescription' ></ion-textarea>
         </ion-item>
       </ion-col>
 
@@ -105,7 +122,7 @@
     
 
     <div style="text-align: center;">
-      <ion-button expand='full' style="--background: #FAC800; color: black; margin: 15px;" shape='rounde'>Sign Up</ion-button>
+      <ion-button class="btnFull" style="--background: #FAC800; color: black; margin: 15px;"  (click)='signUpasVendor()' >Sign Up</ion-button>
     </div>
 
     <div style="text-align: center; padding: 15px;">
@@ -114,21 +131,21 @@
 
   </div>
 
-
-  <div style="border: 2px solid #FAC800; margin: 10px;" *ngIf='selectedButton == "customer"'>
+<!-- Venue -->
+  <div style="border: 2px solid #FAC800; margin: 10px;" *ngIf='selectedButton == "venue"'>
 
     <ion-row>
       <ion-col size=12 size-md=5 offset-md='0.5' >
         <ion-item class="loginInputField">
           <ion-label position='floating'>Business Name *</ion-label>
-        <ion-input placeholder='Example Hotel Grandios' ></ion-input>
+        <ion-input placeholder='Example Hotel Grandios' [(ngModel)]='venueBusinessName' ></ion-input>
         </ion-item>
       </ion-col>
 
       <ion-col size=12 size-md=5 offset-md='1' >
         <ion-item class="loginInputField">
-          <ion-label position='stacked'>City</ion-label>
-        <ion-input placeholder='New York' ></ion-input>
+          <ion-label position='floating'>City</ion-label>
+        <ion-input placeholder='New York' [(ngModel)]='venueCity' ></ion-input>
         </ion-item>
       </ion-col>
 
@@ -137,15 +154,15 @@
     <ion-row>
       <ion-col size=12 size-md=5 offset-md='0.5' >
         <ion-item class="loginInputField">
-          <ion-label position='stacked'>Your Name *</ion-label>
-        <ion-input placeholder='Luke Skywalker' ></ion-input>
+          <ion-label position='floating'>Business Address *</ion-label>
+        <ion-input placeholder='XXXX' [(ngModel)]='venueBusinessAddress' ></ion-input>
         </ion-item>
       </ion-col>
 
       <ion-col size=12 size-md=5 offset-md='1' >
         <ion-item class="loginInputField">
-          <ion-label position='stacked'>Contact Number * </ion-label>
-        <ion-input placeholder='Enter your mobile number' ></ion-input>
+          <ion-label position='floating'>Business Pincode *</ion-label>
+        <ion-input placeholder='XXXXXX' type='tel' maxlength='6' [(ngModel)]='venueBusinessPincode'></ion-input>
         </ion-item>
       </ion-col>
 
@@ -154,17 +171,34 @@
     <ion-row>
       <ion-col size=12 size-md=5 offset-md='0.5' >
         <ion-item class="loginInputField">
-          <ion-label position='stacked'>Email *</ion-label>
-        <ion-input placeholder='luke@email.com' ></ion-input>
+          <ion-label position='floating'>Your Name *</ion-label>
+        <ion-input placeholder='Luke Skywalker' [(ngModel)]='venueName' ></ion-input>
         </ion-item>
       </ion-col>
 
       <ion-col size=12 size-md=5 offset-md='1' >
         <ion-item class="loginInputField">
-          <ion-label position='stacked'>Type of Business * </ion-label>
-        <ion-input placeholder='Select Business type' ></ion-input>
+          <ion-label position='floating'>Contact Number * </ion-label>
+        <ion-input placeholder='Enter your mobile number' type='tel' maxlength='10' [(ngModel)]='venueContactNumber' ></ion-input>
         </ion-item>
       </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col size=12 size-md=5 offset-md='0.5' >
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>Email *</ion-label>
+        <ion-input placeholder='luke@email.com' [(ngModel)]='venueEmail' ></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <!-- <ion-col size=12 size-md=5 offset-md='1' >
+        <ion-item class="loginInputField">
+          <ion-label position='floating'>Type of Business * </ion-label>
+        <ion-input placeholder='Select Business type' [(ngModel)]='venueTypeOfBusiness' ></ion-input>
+        </ion-item>
+      </ion-col> -->
 
     </ion-row>
 
@@ -173,7 +207,7 @@
       <ion-col size=12 size-md=5 offset-md='0.5' >
         <ion-item class="loginInputField" style="padding-bottom: 0px; margin-bottom: 0px;"> 
           <ion-label position='floating'>Business Link (optional)</ion-label>
-        <ion-input placeholder='Link'  ></ion-input>
+        <ion-input placeholder='Link' [(ngModel)]='venueBusinessLink' ></ion-input>
       </ion-item>
       <div style="font-size: 12px;  padding-top: 0px; margin-top: 0px; padding-left: 20px; padding-right: 15px;">
         <ion-text class="ion-text-wrap" >inorder for us to verify and get you onboard quickly as possible</ion-text>
@@ -185,7 +219,7 @@
         <ion-item class="loginInputField">
           <ion-label position='floating'>Business Description(optional) </ion-label>
         
-        <ion-textarea rows='4' placeholder='Hi .......................'  style="padding: 0px !important; margin-left: 0px !important;"></ion-textarea>
+        <ion-textarea rows='4' placeholder='Hi .......................'  style="padding: 0px !important; margin-left: 0px !important;" [(ngModel)]='venueBusinessDescription' ></ion-textarea>
         </ion-item>
       </ion-col>
 
@@ -195,7 +229,7 @@
     
 
     <div style="text-align: center;">
-      <ion-button expand='full' style="--background: #FAC800; color: black; margin: 15px;" shape='rounde'>Sign Up</ion-button>
+      <ion-button class="btnFull" style="--background: #FAC800; color: black; margin: 15px;"  (click)='signUpasVenue()' >Sign Up</ion-button>
     </div>
 
     <div style="text-align: center; padding: 15px;">
