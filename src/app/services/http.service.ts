@@ -6,6 +6,9 @@ export const url = {
   login: root + 'user/login',
   singUpAsCustomer: root + 'user',
   signUpAsBusiness: root + 'business-details/create',
+  country: root + 'world/country',
+  state: root + 'world/state',
+  city: root + 'world/city'
 };
 
 
