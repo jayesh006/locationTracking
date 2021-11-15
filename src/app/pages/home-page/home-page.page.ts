@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ComService } from 'src/app/services/com.service';
 import { HttpService, url } from 'src/app/services/http.service';
 
@@ -24,7 +25,16 @@ export class HomePagePage implements OnInit {
 
   categoryList = [];
 
-  constructor(private com:ComService, private http: HttpService) { }
+  serachObj = {
+    location:'',
+    locationid:'',
+    guest:'',
+    type:'',
+  }
+
+  locationlist = [];
+  locationSelected = false;
+  constructor(private com:ComService, private http: HttpService,public route:Router) { }
 
   ngOnInit() {
   }
@@ -36,6 +46,17 @@ export class HomePagePage implements OnInit {
     });
   }
 
+  onSearch(){
+    if(!this.serachObj.location && !this.serachObj.guest && !this.serachObj.type){
+      return false;
+    }
+    this.route.navigate(['/list'],{"queryParams":this.serachObj})
+  }
+
+  seletcCategory(categoryData){
+    this.route.navigate(['/list'],{"queryParams":{'categoryid':categoryData.id,"category":categoryData.name}})
+  }
+
   onLoginClick(){
     this.com.navCtrl.navigateForward('login-mobile-view');
   }
@@ -45,6 +66,10 @@ export class HomePagePage implements OnInit {
   }
 
   getLoction(event){
+    if(this.locationSelected){
+       this.locationSelected = false;
+       return false; 
+    }
     console.log(event.target.value);
     // For country
     let param = {
@@ -62,6 +87,9 @@ export class HomePagePage implements OnInit {
     // }
     this.http.getData(url.country,param).then( (res: any) => {
       console.log(res);
+      if(res.data && res.data.length > 0){
+        this.locationlist = res.data;
+      }
     }).catch(error => {
       console.log(error);
       if(error.error.status == 400){
@@ -70,6 +98,13 @@ export class HomePagePage implements OnInit {
         });
       }
     });
+  }
+
+  selectLocation(id,locationName){
+    this.locationSelected = true;
+    this.serachObj.location = locationName;
+    this.serachObj.locationid = id;
+    this.locationlist = [];
   }
 
 
