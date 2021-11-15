@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Business Album</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <!-- <ion-row> -->
+        <ion-item class="loginInputField">
+            <ion-input type="text" maxlength="50" placeholder="Enter album name"></ion-input>
+        </ion-item>
+
+        <!-- <ion-item class="loginInputField"> -->
+            <ion-button class="btnCss btnFull" (click)="getFiles()">Choose Image</ion-button>
+            <!-- <ion-label> -->
+            <input id="upfile" type="file" style="visibility: hidden;" multiple (change)="selectFiles($event)" />
+            <!-- </ion-label> -->
+        <!-- </ion-item> -->
+    <!-- </ion-row> -->
+    <ion-row *ngIf="imageSrc.length > 0">
+        <ion-col size="12">
+            <ion-item>
+                <ion-label>{{imageSrc.length}} images selected}}</ion-label>
+            </ion-item>
+        </ion-col>
+        <ion-col size="4" *ngFor="let imgsrc of imageSrc;index as i">
+
+            <button type="button" (click)="removeImage(i)" class="close">
+                <span>&times;</span>
+              </button>
+              <img src="{{imgsrc}}">
+        </ion-col>
+    </ion-row>
+</ion-content>

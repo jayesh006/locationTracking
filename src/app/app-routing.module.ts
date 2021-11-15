@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'create-password',
     loadChildren: () => import('./pages/create-password/create-password.module').then( m => m.CreatePasswordPageModule)
   },
+  {
+    path: 'business-image-upload',
+    loadChildren: () => import('./pages/business-image-upload/business-image-upload.module').then( m => m.BusinessImageUploadPageModule)
+  },
   
 ];
 
