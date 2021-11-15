@@ -51,6 +51,18 @@ const routes: Routes = [
     path: 'business-image-upload',
     loadChildren: () => import('./pages/business-image-upload/business-image-upload.module').then( m => m.BusinessImageUploadPageModule)
   },
+  {
+    path: 'business-detail',
+    loadChildren: () => import('./pages/business-detail/business-detail.module').then( m => m.BusinessDetailPageModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./pages/business-listing/business-listing.module').then( m => m.BusinessListingPageModule)
+  },
+  {
+    path: 'business-homepage',
+    loadChildren: () => import('./pages/business-homepage/business-homepage.module').then( m => m.BusinessHomepagePageModule)
+  },
   
 ];
 
