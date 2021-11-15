@@ -10,7 +10,7 @@ import { HttpService, url } from 'src/app/services/http.service';
 export class SignUpPage implements OnInit {
 
 
-  userType = [{ label: 'User', id: 1, type: 'user' }, { label: 'Business', id: 1, type: 'business' }]
+  userType = [{label:'Customer', id: 4, type:'user'},{label:'Business', id: 3, type:'business'}]
   eye = true;
   passwordType = 'password';
   confirmPasswordeye = true;
@@ -22,6 +22,7 @@ export class SignUpPage implements OnInit {
   phoneNumber = null;
   password = null;
   confirmPassword = null;
+  selectedRole = null;
 
   constructor(private com: ComService, public http : HttpService) { }
 
@@ -71,14 +72,15 @@ export class SignUpPage implements OnInit {
       first_name: this.firstName,
       last_name: this.lastName,
       email: this.email,
-      role: 4,
+      phone: this.phoneNumber,
+      role: this.selectedRole,
       password: this.password,
       confirm_password: this.confirmPassword
     }
     this.http.postData(url.singUpAsCustomer, param ).then( (res: any) => {
       console.log(res);
       this.com.showToast(res.msg).then( () => {
-        this.com.navCtrl.navigateRoot('home-page')
+        this.com.navCtrl.navigateRoot('verification')
       });
 
     } ).catch(error => {
@@ -110,6 +112,10 @@ var message;
 
       case "password":
          message = 'Password ' + msg.toLowerCase();
+      break;
+
+      case "phone":
+         message = msg.toLowerCase();
       break;
 
       default:

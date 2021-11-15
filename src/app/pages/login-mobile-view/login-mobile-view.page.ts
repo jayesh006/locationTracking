@@ -11,8 +11,10 @@ import { StorageService } from 'src/app/services/storage.service';
 export class LoginMobileViewPage implements OnInit {
 
   userType = [{label:'Customer', id: 4, type:'user'},{label:'Business', id: 3, type:'business'}]
-  userName = 'vedaakp@gmail.com';
-  password = 'pawan@123';
+  // userName = 'vedaakp@gmail.com';
+  // password = 'pawan@123';
+  userName = null;
+  password = null;
   selectedRole = null;
   constructor(private com:ComService, private http:HttpService, public storage: StorageService) { 
     

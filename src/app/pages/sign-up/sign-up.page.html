@@ -27,6 +27,13 @@
         </div>
 
         <ion-item class="loginInputField">
+          <!-- <ion-label class="no-margin no-padding" position='floating'>Select User Type:</ion-label> -->
+          <ion-select placeholder="Select User Type " interface="action-sheet" [(ngModel)]='selectedRole' style="width: 100%;" >
+            <ion-select-option *ngFor='let type of userType' [value]='type.id'  >{{type.label}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item class="loginInputField">
           <ion-label position='floating'>First Name</ion-label>
           <ion-input placeholder='Enter First Name' [(ngModel)]='firstName' ></ion-input>
         </ion-item>

@@ -18,7 +18,7 @@ export class ResetPasswordPage implements OnInit {
   }
 
   sendCode(){
-    this.com.navCtrl.navigateForward('verification');
+    this.com.navCtrl.navigateForward('create-password');
   }
 
 }

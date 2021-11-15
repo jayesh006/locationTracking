@@ -8,7 +8,8 @@ export const url = {
   signUpAsBusiness: root + 'business-details/create',
   country: root + 'world/country',
   state: root + 'world/state',
-  city: root + 'world/city'
+  city: root + 'world/city',
+  category: root + 'categories',
 };
 
 
@@ -60,6 +61,42 @@ export class HttpService {
         }
       )
     } );
+  }
+
+  getData(api,param=null,token?, offset=null){
+
+    
+    let endPoint = api;
+    if(param != null){
+      for(let key in param){
+        endPoint += "?"+ key +"=" +param[key];
+        endPoint += "&";
+      }
+      endPoint = endPoint.substr(0,endPoint.length - 1);
+    }
+
+    if(offset != null){
+      if(param == null ){
+        endPoint += 'offset='+offset;
+      }
+      else {
+        endPoint += '&offset=' + offset;
+      }
+    }
+    console.log(endPoint)
+    // console.log(Object.values(param)[0]);
+    // let data = '?'+Object.keys(param)[0]+'='+Object.values(param)[0]
+    return new Promise( (resolve, reject) => {
+
+      this.http.get(endPoint).subscribe(
+        (res) => {
+          resolve(res);
+        },
+        (error) =>{
+          reject(error);
+        }
+      )
+    });
   }
 
 }
