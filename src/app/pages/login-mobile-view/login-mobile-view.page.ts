@@ -40,12 +40,19 @@ export class LoginMobileViewPage implements OnInit {
       password: this.password
     }
 
+
+
     this.http.postData(url.login,param).then( (res: any) => {
       console.log(res);
       this.com.showToast(res.msg, 'bottom'); 
-      this.storage.setData('userData', res.data).then( () => {
-        this.com.navCtrl.navigateRoot('home-page');
-      });
+      if(this.selectedRole == 3){
+        this.com.navCtrl.navigateForward('business-image-upload');
+      }
+      else {
+        this.storage.setData('userData', res.data).then( () => {
+          this.com.navCtrl.navigateRoot('home-page');
+        });
+      }
 
     }).catch(error => {
       console.log(error);

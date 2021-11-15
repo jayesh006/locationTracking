@@ -9,13 +9,14 @@
 <ion-content>
     <!-- <ion-row> -->
         <ion-item class="loginInputField">
-            <ion-input type="text" maxlength="50" placeholder="Enter album name"></ion-input>
+            <ion-input type="text" maxlength="50" placeholder="Enter album name" [(ngModel)]='albumTitle'></ion-input>
         </ion-item>
 
         <!-- <ion-item class="loginInputField"> -->
             <ion-button class="btnCss btnFull" (click)="getFiles()">Choose Image</ion-button>
             <!-- <ion-label> -->
-            <input id="upfile" type="file" style="visibility: hidden;" multiple (change)="selectFiles($event)" />
+                <!-- multiple  -->
+            <input id="upfile" type="file" style="visibility: hidden;"  (change)="selectFiles($event)" />
             <!-- </ion-label> -->
         <!-- </ion-item> -->
     <!-- </ion-row> -->
@@ -25,12 +26,17 @@
                 <ion-label>{{imageSrc.length}} images selected}}</ion-label>
             </ion-item>
         </ion-col>
-        <ion-col size="4" *ngFor="let imgsrc of imageSrc;index as i">
+        <ion-col size='5' offset="0.5" size-md='3' offset-md=0 size-lg='2' offset-lg=0  *ngFor="let imgsrc of imageSrc;index as i">
 
-            <button type="button" (click)="removeImage(i)" class="close">
-                <span>&times;</span>
-              </button>
-              <img src="{{imgsrc}}">
+            <ion-card class="cardCss">
+                {{i}}
+                <button type="button" (click)="removeImage(i)" class="close">
+                    <span>&times;</span>
+                  </button>
+                  <img src="{{imgsrc}}">
+            </ion-card>
         </ion-col>
     </ion-row>
+
+    <ion-button (click)='uploadFiles()' >Submit</ion-button>
 </ion-content>

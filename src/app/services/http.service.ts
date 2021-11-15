@@ -10,6 +10,7 @@ export const url = {
   state: root + 'world/state',
   city: root + 'world/city',
   category: root + 'categories',
+  albumUpload: root + 'media/album',
 };
 
 
