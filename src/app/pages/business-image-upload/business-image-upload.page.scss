@@ -1,0 +1,87 @@
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.btnCss {
+    color: black;
+    margin: 15px;
+    max-width: 400px;
+    min-height: 45px;
+    line-height: 2;
+    --border-radius: 12px;
+    // font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  .imgInputField{
+    margin-top: -48px;
+    margin-left: -16px;
+    height: 70px;
+    width: 85px;
+    visibility:hidden;
+  }
+  
+  .btnFull{
+    @media screen and (max-width: 400px) {
+      min-width: 90vw;
+    }
+    @media screen and (min-width: 400px) {
+      min-width: 30vw;
+    }
+    
+  }
+
+  .loginInputField {
+    border: 1px solid var(--ion-color-primary);
+    border-radius: 11px;
+    margin: 15px;
+    max-width: 400px;
+    // max-height: 60px;
+    //   @media screen and (min-width: 600px) {
+    //       width: 400px;
+    //     //   text-align: center;
+    //   }
+    ion-input{
+      --placeholder-color:#BABABA
+    }
+    ion-label{
+      color:#BABABA;
+      font-size: 16;
+    }
+  }
+
+  button{
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    background: var(--ion-color-primary);
+    font-size: 25px;
+    border-radius: 10px;
+  }
+  img {
+    position: relative;
+    border: 1px solid var(--ion-color-primary);
+    border-radius: 10px;
+    height: 110px;
+    width: 110px;
+  }
+
+  #yourBtn {
+    position: relative;
+    top: 150px;
+    font-family: calibri;
+    width: 150px;
+    padding: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px dashed #BBB;
+    text-align: center;
+    background-color: #DDD;
+    cursor: pointer;
+  }
