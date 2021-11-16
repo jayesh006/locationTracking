@@ -152,8 +152,10 @@ export class BusinessImageUploadPage implements OnInit {
       let param = new FormData();
       param.append('name', this.albumTitle);
       param.append('business_id', '1');
+      console.log("upload file", this.uploadImageSrc[0][0]);
       for(var i = 0; i < this.uploadImageSrc.length; i++){
-        param.append('image', this.uploadImageSrc[0]);
+        // console.log(this.uploadImageSrc[i].FileList[0].File)
+        param.append('image', this.uploadImageSrc[i][0], this.uploadImageSrc[i][0]['name']);
       }
       this.http.postData(url.albumUpload,param).then(
         (res: any) => {
