@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ComService } from 'src/app/services/com.service';
 
 @Component({
   selector: 'app-business-listing',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusinessListingPage implements OnInit {
 
-  constructor() { }
+  constructor(private com: ComService) { }
 
   ngOnInit() {
+  }
+
+  goBack(){
+    this.com.navCtrl.back();
   }
 
 }

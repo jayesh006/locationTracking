@@ -45,6 +45,9 @@ export class HomePagePage implements OnInit {
       console.log('res : ', res );
     });
   }
+  goToBusinessList(){
+    this.com.navCtrl.navigateForward('list');
+  }
 
   onSearch(){
     if(!this.serachObj.location && !this.serachObj.guest && !this.serachObj.type){

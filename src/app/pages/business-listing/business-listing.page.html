@@ -1,9 +1,433 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)='goBack()'>
+        <ion-icon name='arrow-back'></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Business listing</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-card style="width: 400px; background: white; " >
+        <div class="ion-justify-content-start"
+          style=" height: 150px; background: #C4C4C4;  border-radius: 12px; background: url(assets/images/anchor.jpg) 0 0/100% 100% no-repeat; position: relative;">
+          <ion-button style="margin-left: -120px !important; margin-top: 7px !important;" size="small">Feature</ion-button>
+        </div>
+        <div style=" height: 150px; background: white;  border-radius: 12px; text-align: left; padding: 15px;">
+          <div>
+            <ion-text style="color: black;">The Royal Treat</ion-text>
+          </div>
+          <div>
+            <ion-text><small>New Jersey</small></ion-text>
+          </div>
+          <br>
+          <div>
+            <ion-text color="success" style="font-size: 24px;">$72 <span style="color:'#A4A4A4';font-size: 12px;">/ Per Person</span></ion-text>
+          </div>
+          <hr style="height: 1px; background: #C4C4C4;">
+
+
+
+          <ion-row>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="people"></ion-icon>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <i class="fas fa-chair"></i>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="man"></ion-icon>
+              &nbsp;
+              82
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+      </ion-card>
+      
+    </ion-item>
+
+    <ion-item>
+      <ion-card style="width: 400px; background: white;">
+        <div
+          style=" height: 150px; background: #C4C4C4;  border-radius: 12px; background: url(assets/images/Choreographer.jpg) 0 0/100% 100% no-repeat; position: relative;">
+          <ion-button style="margin-left: -120px !important; margin-top: 7px !important;" size="small">Feature</ion-button>
+        </div>
+        <div style=" height: 150px; background: white;  border-radius: 12px; text-align: left; padding: 15px;">
+          <div>
+            <ion-text>The Royal Treat</ion-text>
+          </div>
+          <div>
+            <ion-text>New Jersey</ion-text>
+          </div>
+          <br>
+          <div>
+            <ion-text color="success" style="font-size: 24px;">$72 <span style="color:'#A4A4A4';font-size: 12px;">/ Per Person</span></ion-text>
+          </div>
+          <hr style="height: 1px; background: #C4C4C4;">
+
+
+
+          <ion-row>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="people"></ion-icon>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <i class="fas fa-chair"></i>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="man"></ion-icon>
+              &nbsp;
+              82
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-card style="width: 400px; background: white;">
+        <div
+          style=" height: 150px; background: #C4C4C4;  border-radius: 12px; background: url(assets/images/Comedians.jpg) 0 0/100% 100% no-repeat;">
+          <ion-button style="margin-left: -120px !important; margin-top: 7px !important;" size="small">Feature</ion-button>
+        </div>
+        <div style=" height: 150px; background: white;  border-radius: 12px; text-align: left; padding: 15px;">
+          <div>
+            <ion-text>The Royal Treat</ion-text>
+          </div>
+          <div>
+            <ion-text>New Jersey</ion-text>
+          </div>
+          <br>
+          <div>
+            <ion-text color="success" style="font-size: 24px;">$72 <span style="color:'#A4A4A4';font-size: 12px;">/ Per Person</span></ion-text>
+          </div>
+          <hr style="height: 1px; background: #C4C4C4;">
+
+
+
+          <ion-row>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="people"></ion-icon>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <i class="fas fa-chair"></i>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="man"></ion-icon>
+              &nbsp;
+              82
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-card style="width: 400px; background: white;">
+        <div
+          style=" height: 150px; background: #C4C4C4;  border-radius: 12px; background: url(assets/images/decorators.jpg) 0 0/100% 100% no-repeat; position: relative;">
+          <ion-button style="margin-left: -120px !important; margin-top: 7px !important;" size="small">Feature</ion-button>
+        </div>
+        <div style=" height: 150px; background: white;  border-radius: 12px; text-align: left; padding: 15px;">
+          <div>
+            <ion-text>The Royal Treat</ion-text>
+          </div>
+          <div>
+            <ion-text>New Jersey</ion-text>
+          </div>
+          <br>
+          <div>
+            <ion-text color="success" style="font-size: 24px;">$72 <span style="color:'#A4A4A4';font-size: 12px;">/ Per Person</span></ion-text>
+          </div>
+          <hr style="height: 1px; background: #C4C4C4;">
+
+
+
+          <ion-row>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="people"></ion-icon>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <i class="fas fa-chair"></i>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="man"></ion-icon>
+              &nbsp;
+              82
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-card style="width: 400px; background: white;">
+        <div
+          style=" height: 150px; background: #C4C4C4;  border-radius: 12px; background: url(assets/images/dj.jpg) 0 0/100% 100% no-repeat; position: relative;">
+          <ion-button style="margin-left: -120px !important; margin-top: 7px !important;" size="small">Feature</ion-button>
+        </div>
+        <div style=" height: 150px; background: white;  border-radius: 12px; text-align: left; padding: 15px;">
+          <div>
+            <ion-text>The Royal Treat</ion-text>
+          </div>
+          <div>
+            <ion-text>New Jersey</ion-text>
+          </div>
+          <br>
+          <div>
+            <ion-text color="success" style="font-size: 24px;">$72 <span style="color:'#A4A4A4';font-size: 12px;">/ Per Person</span></ion-text>
+          </div>
+          <hr style="height: 1px; background: #C4C4C4;">
+
+
+
+          <ion-row>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="people"></ion-icon>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <i class="fas fa-chair"></i>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="man"></ion-icon>
+              &nbsp;
+              82
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-card style="width: 400px; background: white;">
+        <div
+          style=" height: 150px; background: #C4C4C4;  border-radius: 12px; background: url(assets/images/makeup_artists.jpg) 0 0/100% 100% no-repeat; position: relative;">
+          <ion-button style="margin-left: -120px !important; margin-top: 7px !important;" size="small">Feature</ion-button>
+        </div>
+        <div style=" height: 150px; background: white;  border-radius: 12px; text-align: left; padding: 15px;">
+          <div>
+            <ion-text>The Royal Treat</ion-text>
+          </div>
+          <div>
+            <ion-text>New Jersey</ion-text>
+          </div>
+          <br>
+          <div>
+            <ion-text color="success" style="font-size: 24px;">$72 <span style="color:'#A4A4A4';font-size: 12px;">/ Per Person</span></ion-text>
+          </div>
+          <hr style="height: 1px; background: #C4C4C4;">
+
+
+
+          <ion-row>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="people"></ion-icon>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <i class="fas fa-chair"></i>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="man"></ion-icon>
+              &nbsp;
+              82
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-card style="width: 400px; background: white;">
+        <div
+          style=" height: 150px; background: #C4C4C4;  border-radius: 12px; background: url(assets/images/mehndi_designer.jpg) 0 0/100% 100% no-repeat; position: relative;">
+          <ion-button style="margin-left: -120px !important; margin-top: 7px !important;" size="small">Feature</ion-button>
+        </div>
+        <div style=" height: 150px; background: white;  border-radius: 12px; text-align: left; padding: 15px;">
+          <div>
+            <ion-text>The Royal Treat</ion-text>
+          </div>
+          <div>
+            <ion-text>New Jersey</ion-text>
+          </div>
+          <br>
+          <div>
+            <ion-text color="success" style="font-size: 24px;">$72 <span style="color:'#A4A4A4';font-size: 12px;">/ Per Person</span></ion-text>
+          </div>
+          <hr style="height: 1px; background: #C4C4C4;">
+
+
+
+          <ion-row>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="people"></ion-icon>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <i class="fas fa-chair"></i>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="man"></ion-icon>
+              &nbsp;
+              82
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-card style="width: 400px; background: white;">
+        <div
+          style=" height: 150px; background: #C4C4C4;  border-radius: 12px; background: url(assets/images/wedding_planners.jpg) 0 0/100% 100% no-repeat;; position: relative;">
+          <ion-button style="margin-left: -120px !important; margin-top: 7px !important;" size="small">Feature</ion-button>
+        </div>
+        <div style=" height: 150px; background: white;  border-radius: 12px; text-align: left; padding: 15px;">
+          <div>
+            <ion-text>The Royal Treat</ion-text>
+          </div>
+          <div>
+            <ion-text>New Jersey</ion-text>
+          </div>
+          <br>
+          <div>
+            <ion-text color="success" style="font-size: 24px;">$72 <span style="color:'#A4A4A4';font-size: 12px;">/ Per Person</span></ion-text>
+          </div>
+          <hr style="height: 1px; background: #C4C4C4;">
+
+
+
+          <ion-row>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="people"></ion-icon>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <i class="fas fa-chair"></i>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="man"></ion-icon>
+              &nbsp;
+              82
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-card style="width: 400px; background: white;">
+        <div
+          style=" height: 150px; background: #C4C4C4;  border-radius: 12px; background: url(assets/images/wedding_planners.jpg) 0 0/100% 100% no-repeat;; position: relative;">
+          <ion-button style="margin-left: -120px !important; margin-top: 7px !important;" size="small">Feature</ion-button>
+        </div>
+        <div style=" height: 150px; background: white;  border-radius: 12px; text-align: left; padding: 15px;">
+          <div>
+            <ion-text>The Royal Treat</ion-text>
+          </div>
+          <div>
+            <ion-text>New Jersey</ion-text>
+          </div>
+          <br>
+          <div>
+            <ion-text color="success" style="font-size: 24px;">$72 <span style="color:'#A4A4A4';font-size: 12px;">/ Per Person</span></ion-text>
+          </div>
+          <hr style="height: 1px; background: #C4C4C4;">
+
+
+
+          <ion-row>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="people"></ion-icon>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <i class="fas fa-chair"></i>
+              &nbsp;
+              &nbsp;
+              82
+            </ion-col>
+            <ion-col style="display: flex; align-items: center;">
+              <ion-icon name="man"></ion-icon>
+              &nbsp;
+              82
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+      </ion-card>
+    </ion-item>
+
+  </ion-list>
+
 
 </ion-content>
