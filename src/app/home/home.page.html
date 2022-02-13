@@ -1,20 +1,48 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+
+  <ion-toolbar color="warning">
+    
+    <ion-title slot="end">Google Map</ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- Map area  -->
+  <div class="map-wrapper">
+    <!-- will show the current location on map load -->
+    <div id="map_center" [hidden]="showHide">
+      <ion-icon style="font-size: 30px;"  name="location-outline"></ion-icon>
+    </div>
+    <div #map id="map"></div>
   </div>
+
+  <!-- will the location on screen  -->
+  <ion-button (click)="loadMap()" shape="round" color="dark">
+    <ion-icon slot="start" name="locate"></ion-icon>
+    Where I Am
+  </ion-button>
+
+  <!-- Will start captureing coordinates -->
+  <ion-button (click)="startTracking()" *ngIf="!isTracking">
+    <ion-icon name="locate"></ion-icon>
+    Start Tracking
+  </ion-button>
+
+  <!-- To stop  -->
+  <ion-button (click)="stopTracking()" *ngIf="isTracking">
+    <ion-icon name="hand-left-outline"></ion-icon>
+    Stop Tracking
+  </ion-button>
+
+  <!-- will list down the paths  -->
+  <ion-list>
+    <ion-list-header>Previous Tracks</ion-list-header>
+    <ion-item *ngFor="let route of previousTracks">
+      {{ route.finished | date }}, {{ route.path.length }} Waypoints
+      <button ion-button clear item-end (click)="showHistoryRoute(route.path)">View Route</button>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
